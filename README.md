@@ -1,5 +1,5 @@
 #PowerShell
-- Place `profile.ps1` in (`C:\Users\Evan\Documents\WindowsPowerShell\`) directory (create it if it doesn't exist!)
+- Place `profile.ps1` in `C:\Users\Evan\Documents\WindowsPowerShell\` (create it if it doesn't exist!)
 - Run PowerShell
 - You will see the following error message:
 ```
