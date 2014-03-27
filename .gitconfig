@@ -1,0 +1,13 @@
+[user]
+	name = Evan Cummings
+	email = emcummings@gmail.com
+[alias]
+	co = checkout
+	st = status
+	nuke = reset --hard
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[core]
+	autocrlf = true
+	safecrlf = false
+[merge]
+	tool = kdiff3
