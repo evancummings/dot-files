@@ -18,7 +18,7 @@ File C:\Users\Evan\Documents\WindowsPowerShell\profile.ps1 cannot be loaded beca
 - Profit
  
 #git
-- Place `.gitconfig` in your home directory (`C:\Users\Evan\`)
+- Place `.gitconfig` in your home directory
 ```
 >> cd ~
 >> start .
