@@ -1,14 +1,14 @@
-//Get Path
+#Get Path
 $env:Path = $env:Path + ";c:\Users\Evan\bin\";
 
-//Set Default Working Directory
+#Set Default Working Directory
 $dev = "c:\code"
 cd $dev
 
-//Add Linux Alias
+#Add Linux Alias
 New-Alias which get-command
 
-//Fancy git Display
+#Fancy git Display
 function prompt {
 	
 	$userLocation = $env:username + '@' + [System.Environment]::MachineName + ' ' + $path
@@ -34,12 +34,12 @@ function prompt {
 	return " "
 }
 
-//Open Visual Studio with closest Solution
+#Open Visual Studio with closest Solution
 function vso {
 	$var = Resolve-Path *.sln
 	start $var
 }
 New-Alias vsopen vso
 
-//Add subl <file / dir> command (i.e. >> subl ., >> subl Readme.txt)
+#Add subl <file / dir> command (i.e. >> subl ., >> subl Readme.txt)
 Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
