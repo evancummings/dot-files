@@ -1,6 +1,3 @@
-dot-files
-=========
-
 #PowerShell
 - Place `profile.ps1` in your `Users\Evan\Documents\WindowsPowerShell\` directory (create it if it doesn't exist!)
 - Run PowerShell
