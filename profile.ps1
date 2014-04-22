@@ -41,5 +41,24 @@ function vso {
 }
 New-Alias vsopen vso
 
+#Replicate Unix touch functionality - http://superuser.com/a/571154
+Function Touch-File
+{
+    $file = $args[0]
+    if($file -eq $null) {
+        throw "No filename supplied"
+    }
+
+    if(Test-Path $file)
+    {
+        (Get-ChildItem $file).LastWriteTime = Get-Date
+    }
+    else
+    {
+        echo $null > $file
+    }
+}
+New-Alias touch Touch-File
+
 #Add subl <file / dir> command (i.e. >> subl ., >> subl Readme.txt)
 Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
