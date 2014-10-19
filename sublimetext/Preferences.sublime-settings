@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"draw_white_space": "all",
 	"font_face": "Source Code Pro",
 	"font_size": 14,
@@ -11,6 +10,5 @@
 		"GitGutter"
 	],
 	"tab_size": 2,
-	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
