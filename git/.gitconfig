@@ -4,8 +4,14 @@
 [alias]
 	co = checkout
 	st = status
-	nuke = reset --hard
+	addall = add --all
+	pullr = pull --rebase
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	sync = pull --rebase
+    	nuke = !git reset --hard && git clean -fx
+	up = !git pull --rebase $@ && git submodule update --init --recursive
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
 [core]
 	autocrlf = true
 	safecrlf = false
