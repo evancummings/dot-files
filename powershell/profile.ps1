@@ -60,5 +60,16 @@ Function Touch-File
 }
 New-Alias touch Touch-File
 
+#Release all common locks during Visual Studio Build- 
+Function Kill-Locks
+{
+	$iis = "taskkill /IM iisexpress.exe /F"
+	$msbuild = "taskkill /im msbuild.exe /f /t"
+	$vbc = "taskkill /im VBCSCompiler.exe /f /t"	
+	iex $iis
+	iex $msbuild
+	iex $vbc	
+}
+
 #Add subl <file / dir> command (i.e. >> subl ., >> subl Readme.txt)
 Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
