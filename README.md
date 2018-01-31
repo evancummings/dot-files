@@ -1,4 +1,4 @@
-#PowerShell
+# PowerShell
 - Place `profile.ps1` in `C:\Users\Evan\Documents\WindowsPowerShell\` (create it if it doesn't exist!)
 - Run PowerShell
 - You will see the following error message:
@@ -17,7 +17,7 @@ File C:\Users\Evan\Documents\WindowsPowerShell\profile.ps1 cannot be loaded beca
 - ???
 - Profit
  
-#git
+# git
 - Place `.gitconfig` in your home directory
 ```
 >> cd ~
