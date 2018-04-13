@@ -35,9 +35,23 @@ function prompt {
 }
 
 #Open Visual Studio with closest Solution
-function vso {
-	$var = Resolve-Path *.sln
-	start $var
+function vso {	
+	$solutionsInFolder = (Get-ChildItem "*.sln").Count	
+	$solutionToOpen = ""
+
+	if ($solutionsInFolder -gt 1)
+	{
+		$solutionToOpen = "Web.sln"
+
+	} else {
+		$solutionToOpen = "*.sln"
+	}
+
+	$solutionPath = Resolve-Path $solutionToOpen
+
+	Write-Host "Found $SolutionsInFolder solutions. Opening '$solutionPath'..."
+
+	Start-Process $solutionPath
 }
 New-Alias vsopen vso
 
