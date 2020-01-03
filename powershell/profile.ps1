@@ -1,10 +1,3 @@
-#Get Path
-$env:Path = $env:Path + ";c:\Users\Evan\bin\";
-
-#Set Default Working Directory
-$dev = "c:\code"
-cd $dev
-
 #Add Linux Alias
 New-Alias which get-command
 
@@ -87,3 +80,10 @@ Function Kill-Locks
 
 #Add subl <file / dir> command (i.e. >> subl ., >> subl Readme.txt)
 Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
+
+function CleanGitMergedBranches
+{
+    git branch --merged | %{$_.trim()} | ?{$_ -notmatch 'dev' -and $_ -notmatch 'master'} | %{git branch -d $_}
+}
+
+New-Alias gitclean CleanGitMergedBranches
